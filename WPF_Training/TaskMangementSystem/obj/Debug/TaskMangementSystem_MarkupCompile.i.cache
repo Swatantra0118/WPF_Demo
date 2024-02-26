@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\
+C:\Users\talhakhan\Downloads\WPF-Taskmanager\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\
 TaskMangementSystem
 none
 false
 DEBUG;TRACE
-C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\App.xaml
-21893380784
+C:\Users\talhakhan\Downloads\WPF-Taskmanager\WPF_Demo\WPF_Training\TaskMangementSystem\App.xaml
+3-2040422067
 
-14753159624
-1271365485589
-Views\AddTaskView.xaml;Views\TasksView.xaml;
+162073353188
+127641204597
+Views\AddTaskView.xaml;Views\TaskDetailWindow.xaml;Views\TasksView.xaml;
 
 True
 

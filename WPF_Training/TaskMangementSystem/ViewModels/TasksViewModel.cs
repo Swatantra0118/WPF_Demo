@@ -5,6 +5,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Input;
 using TaskMangementSystem.Infrastructure;
 using TaskMangementSystem.Models;
@@ -30,11 +31,13 @@ namespace TaskMangementSystem.ViewModels
         public ICommand DeleteTaskCommand { get; set; }
 
         public ICommand ShowWindowCommand { get; set; }
+        public ICommand ViewTaskCommand { get; }
 
         public TasksViewModel()
         {
             Tasks = new ObservableCollection<TaskViewModel>();
-
+            var s = new List<string>();
+            s.Add("THIS COMMENT IS HERE!");
             // Adding prior tasks
             Tasks.Add(new TaskViewModel
             {
@@ -44,7 +47,8 @@ namespace TaskMangementSystem.ViewModels
                     DateOfCreation = DateTime.Now.AddDays(-2), // Example date
                     Heading = "Prior Task 1",
                     Description = "Description for Prior Task 1",
-                    Status = TaskModel.TaskStatus.InProgress
+                    Status = TaskModel.TaskStatus.InProgress,
+                    Comments=s
                 }
             });
 
@@ -64,6 +68,21 @@ namespace TaskMangementSystem.ViewModels
             UpdateTaskStatusCommand = new RelayCommand(UpdateTaskStatus);
             DeleteTaskCommand = new RelayCommand(DeleteTask);
             ShowWindowCommand = new RelayCommand(ShowWindow, CanShowWindow);
+            ViewTaskCommand = new RelayCommand(ViewTask);
+        }
+
+        private void ViewTask(object parameter)
+        {
+            if (parameter is TaskModel selectedTask)
+            {
+                TaskDetailViewModel taskDetailViewModel = new TaskDetailViewModel();
+                taskDetailViewModel.SelectedTask = selectedTask;
+
+                TaskDetailWindow taskDetailWindow = new TaskDetailWindow();
+                taskDetailWindow.DataContext = taskDetailViewModel;
+                taskDetailWindow.Owner = Application.Current.MainWindow;
+                taskDetailWindow.ShowDialog();
+            }
         }
 
         private bool CanShowWindow(object obj)
@@ -117,7 +136,10 @@ namespace TaskMangementSystem.ViewModels
 
         private void DeleteTask(object obj)
         {
-            // Delete task logic here
+            if (obj is TaskViewModel taskToDelete)
+            {
+                Tasks.Remove(taskToDelete);
+            }
         }
 
         public Array TaskStatusValues => Enum.GetValues(typeof(TaskModel.TaskStatus));
