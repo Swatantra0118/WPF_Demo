@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Caliburn.Micro;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -10,18 +11,18 @@ using TaskMangementSystem.Models;
 
 namespace TaskMangementSystem.ViewModels
 {
-    public class TaskDetailViewModel : INotifyPropertyChanged
+    public class TaskDetailViewModel : Screen,INotifyPropertyChanged
     {
-        private TaskModel _selectedTask;
+        private TaskViewModel _selectedTaskViewModel;
         private string _newComment;
 
-        public TaskModel SelectedTask
+        public TaskViewModel SelectedTaskViewModel
         {
-            get { return _selectedTask; }
+            get { return _selectedTaskViewModel; }
             set
             {
-                _selectedTask = value;
-                OnPropertyChanged(nameof(SelectedTask));
+                _selectedTaskViewModel = value;
+                OnPropertyChanged(nameof(SelectedTaskViewModel));
             }
         }
 
@@ -44,12 +45,13 @@ namespace TaskMangementSystem.ViewModels
 
         private void AddComment(object parameter)
         {
-            if (SelectedTask != null && !string.IsNullOrEmpty(NewComment))
+            if (SelectedTaskViewModel != null && !string.IsNullOrEmpty(NewComment))
             {
-                if (SelectedTask.Comments == null) { SelectedTask.Comments = new List<string>(); }
-                SelectedTask.Comments.Add(NewComment);
-                SelectedTask.Comments.Count();
+                if (SelectedTaskViewModel.Task.Comments == null)
+                    SelectedTaskViewModel.Task.Comments = new List<string>();
 
+                SelectedTaskViewModel.Task.Comments.Add(NewComment);
+                SelectedTaskViewModel.NotifyOfPropertyChange(nameof(SelectedTaskViewModel.Task));
                 NewComment = string.Empty;
             }
         }
@@ -61,5 +63,6 @@ namespace TaskMangementSystem.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
     }
+
 
 }

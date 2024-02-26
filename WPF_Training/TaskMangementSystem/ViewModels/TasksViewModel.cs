@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ using TaskMangementSystem.Views;
 
 namespace TaskMangementSystem.ViewModels
 {
-    public class TasksViewModel : Screen
+    public class TasksViewModel : Screen,INotifyPropertyChanged
     {
         private ObservableCollection<TaskViewModel> _tasks;
         public ObservableCollection<TaskViewModel> Tasks
@@ -38,6 +39,9 @@ namespace TaskMangementSystem.ViewModels
             Tasks = new ObservableCollection<TaskViewModel>();
             var s = new List<string>();
             s.Add("THIS COMMENT IS HERE!");
+            //s.Add("THIs");
+            //s.Add("bgggg");
+
             // Adding prior tasks
             Tasks.Add(new TaskViewModel
             {
@@ -73,14 +77,14 @@ namespace TaskMangementSystem.ViewModels
 
         private void ViewTask(object parameter)
         {
-            if (parameter is TaskModel selectedTask)
+            if (parameter is TaskViewModel selectedTask)
             {
                 TaskDetailViewModel taskDetailViewModel = new TaskDetailViewModel();
-                taskDetailViewModel.SelectedTask = selectedTask;
+                taskDetailViewModel.SelectedTaskViewModel = selectedTask;
 
                 TaskDetailWindow taskDetailWindow = new TaskDetailWindow();
                 taskDetailWindow.DataContext = taskDetailViewModel;
-                taskDetailWindow.Owner = Application.Current.MainWindow;
+                //taskDetailWindow.Owner = Application.Current.MainWindow;
                 taskDetailWindow.ShowDialog();
             }
         }
@@ -141,6 +145,14 @@ namespace TaskMangementSystem.ViewModels
                 Tasks.Remove(taskToDelete);
             }
         }
+
+
+        //public event PropertyChangedEventHandler PropertyChanged;
+
+        //protected virtual void OnPropertyChanged(string propertyName)
+        //{
+        //    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        //}
 
         public Array TaskStatusValues => Enum.GetValues(typeof(TaskModel.TaskStatus));
 
