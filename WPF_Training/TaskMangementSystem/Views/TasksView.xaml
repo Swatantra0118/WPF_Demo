@@ -1,0 +1,61 @@
+﻿<Window x:Class="TaskMangementSystem.Views.TasksView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:TaskMangementSystem.Models"
+        xmlns:local="clr-namespace:TaskMangementSystem.Views"
+        mc:Ignorable="d"
+        Title="Tasks Management System" Height="450" Width="800">
+    <Grid Background="#F5F5F5">
+        <Grid Background="White" Grid.Row="1" Margin="25,40,25,15" >
+            <TextBox Name="FilterTextBox"  Height="30" Width="200" Margin="25" 
+                     VerticalAlignment="Top"  HorizontalAlignment="left" BorderThickness="1" BorderBrush="#E0E0E0" />
+            <Button Height="30" Command="{Binding ShowWindowCommand}"  
+                    Content="Add Task" Width="100" VerticalContentAlignment="Center" Padding="5" Margin="25" VerticalAlignment="Top" 
+                    HorizontalAlignment="Right" BorderThickness="1" BorderBrush="#E0E0E0"  />
+            <ListView ItemsSource="{Binding Tasks}" BorderBrush="#cdcdcd" Margin="25,70,25,25" Padding="0">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Task.Id}" Width="Auto" />
+                        <GridViewColumn Header="Date Of Creation" DisplayMemberBinding="{Binding Task.DateOfCreation}" Width="Auto" />
+                        <GridViewColumn Header="Heading" DisplayMemberBinding="{Binding Task.Heading}" Width="Auto" />
+                        <GridViewColumn Header="Created By" DisplayMemberBinding="{Binding Task.CreatedBy}" Width="Auto" />
+                        <!--<GridViewColumn Header="Status" DisplayMemberBinding="{Binding Task.Status}" Width="Auto" />-->
+
+                        <!--Status-->
+                        <GridViewColumn Header="Status">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ComboBox ItemsSource="{Binding DataContext.TaskStatusValues, RelativeSource={RelativeSource AncestorType=ListView}}" SelectedItem="{Binding Task.Status, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        
+                    </GridView>
+                </ListView.View>
+
+                <!--Updating row colors on the basis of status-->
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.Triaged}">
+                                <Setter Property="Background" Value="LightGray"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.InProgress}">
+                                <Setter Property="Background" Value="LightBlue"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.UnderReview}">
+                                <Setter Property="Background" Value="LightYellow"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.Done}">
+                                <Setter Property="Background" Value="LightGreen"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.ItemContainerStyle>
+                
+            </ListView>
+        </Grid>
+    </Grid>
+</Window>
