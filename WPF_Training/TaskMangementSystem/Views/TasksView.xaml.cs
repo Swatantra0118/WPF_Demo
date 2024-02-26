@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TaskMangementSystem.ViewModels;
 
 namespace TaskMangementSystem.Views
 {
@@ -22,6 +23,24 @@ namespace TaskMangementSystem.Views
         public TasksView()
         {
             InitializeComponent();
+        }
+        private void TasksView_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (e.NewValue is TasksViewModel viewModel)
+            {
+                viewModel.OnTogglePopupRequested += TogglePopupVisibility;
+            }
+        }
+
+        private void TogglePopupVisibility(object sender, EventArgs e)
+        {
+            // Toggle the visibility of the popupBorder
+            popupBorder.Visibility = popupBorder.Visibility == Visibility.Visible ? Visibility.Collapsed : Visibility.Visible;
+        }
+
+        private void ClosePopup_Click(object sender, RoutedEventArgs e)
+        {
+            popupBorder.Visibility = Visibility.Collapsed;
         }
     }
 }

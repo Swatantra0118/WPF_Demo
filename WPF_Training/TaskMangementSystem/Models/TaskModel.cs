@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace TaskMangementSystem.Models
         public string Heading { get; set; }
         public string Description { get; set; }
         public string CreatedBy { get; set; }
-        public List<CommentModel> Comments { get; set; }
+        public ObservableCollection<CommentModel> Comments { get; set; }
         public enum TaskStatus
         {
             InProgress,
