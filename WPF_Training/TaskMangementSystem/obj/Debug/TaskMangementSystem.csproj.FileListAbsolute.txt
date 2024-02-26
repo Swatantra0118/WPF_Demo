@@ -40,3 +40,5 @@ C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\Ta
 C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.CopyComplete
 C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.exe
 C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddTaskView.g.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddTaskView.baml

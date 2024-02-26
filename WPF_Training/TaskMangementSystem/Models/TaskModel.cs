@@ -14,6 +14,7 @@ namespace TaskMangementSystem.Models
         public string Description { get; set; }
         public string CreatedBy { get; set; }
         public List<CommentModel> Comments { get; set; }
+        //public string Status { get; set; }
         public enum TaskStatus
         {
             InProgress,
@@ -21,5 +22,6 @@ namespace TaskMangementSystem.Models
             Done
         }
         public TaskStatus Status { get; set; }
+
     }
 }

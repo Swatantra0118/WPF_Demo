@@ -90,8 +90,12 @@
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Infrastructure\RelayCommand.cs" />
+    <Compile Include="ViewModels\AddTaskViewModel.cs" />
     <Compile Include="ViewModels\TasksViewModel.cs" />
     <Compile Include="ViewModels\TaskViewModel.cs" />
+    <Compile Include="Views\AddTaskView.xaml.cs">
+      <DependentUpon>AddTaskView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\TasksView.xaml.cs">
       <DependentUpon>TasksView.xaml</DependentUpon>
     </Compile>
@@ -99,6 +103,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\AddTaskView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\TasksView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

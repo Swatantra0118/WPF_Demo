@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using TaskMangementSystem.Infrastructure;
 using TaskMangementSystem.Models;
+using TaskMangementSystem.Views;
 
 namespace TaskMangementSystem.ViewModels
 {
@@ -27,6 +28,8 @@ namespace TaskMangementSystem.ViewModels
         public ICommand AddTaskCommand { get; set; }
         public ICommand UpdateTaskStatusCommand { get; set; }
         public ICommand DeleteTaskCommand { get; set; }
+
+        public ICommand ShowWindowCommand { get; set; }
 
         public TasksViewModel()
         {
@@ -60,6 +63,34 @@ namespace TaskMangementSystem.ViewModels
             AddTaskCommand = new RelayCommand(AddTask);
             UpdateTaskStatusCommand = new RelayCommand(UpdateTaskStatus);
             DeleteTaskCommand = new RelayCommand(DeleteTask);
+            ShowWindowCommand = new RelayCommand(ShowWindow, CanShowWindow);
+        }
+
+        private bool CanShowWindow(object obj)
+        {
+            return true;
+        }
+
+        private async void ShowWindow(object obj)
+        {
+            //AddTask addTaskWindow = new AddTask();
+            //addTaskWindow.Show();
+            AddTaskViewModel addTaskViewModel = new AddTaskViewModel();
+            WindowManager windowManager = new WindowManager();
+            bool? result = await windowManager.ShowDialogAsync(addTaskViewModel);
+
+            if (result.HasValue && result.Value)
+            {
+                // If the user confirmed adding the task
+                addTaskViewModel.Task.Id = Guid.NewGuid();
+                addTaskViewModel.Task.DateOfCreation = DateTime.Now;
+                addTaskViewModel.Task.Status = TaskModel.TaskStatus.InProgress;
+                var newTaskViewModel = new TaskViewModel
+                {
+                    Task = addTaskViewModel.Task
+                };
+                Tasks.Add(newTaskViewModel);
+            }
         }
 
         private void AddTask(object obj)

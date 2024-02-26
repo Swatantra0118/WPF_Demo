@@ -10,15 +10,17 @@
         <Grid Background="White" Grid.Row="1" Margin="25,40,25,15" >
             <TextBox Name="FilterTextBox"  Height="30" Width="200" Margin="25" 
                      VerticalAlignment="Top"  HorizontalAlignment="left" BorderThickness="1" BorderBrush="#E0E0E0" />
-            <Button Height="30" Command="{Binding AddTaskCommand}"  
+            <Button Height="30" Command="{Binding ShowWindowCommand}"  
                     Content="Add Task" Width="100" VerticalContentAlignment="Center" Padding="5" Margin="25" VerticalAlignment="Top" 
                     HorizontalAlignment="Right" BorderThickness="1" BorderBrush="#E0E0E0"  />
             <ListView ItemsSource="{Binding Tasks}" BorderBrush="#cdcdcd" Margin="25,70,25,25" Padding="0">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Task.Id}"/>
-                        <GridViewColumn Header="Date Of Creation" DisplayMemberBinding="{Binding Task.DateOfCreation}"/>
-                        <GridViewColumn Header="Heading" DisplayMemberBinding="{Binding Task.Heading}"/>
+                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Task.Id}" Width="Auto" />
+                        <GridViewColumn Header="Date Of Creation" DisplayMemberBinding="{Binding Task.DateOfCreation}" Width="Auto" />
+                        <GridViewColumn Header="Heading" DisplayMemberBinding="{Binding Task.Heading}" Width="Auto" />
+                        <GridViewColumn Header="Created By" DisplayMemberBinding="{Binding Task.CreatedBy}" Width="Auto" />
+                        <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Task.Status}" Width="Auto" />
                     </GridView>
                 </ListView.View>
             </ListView>
