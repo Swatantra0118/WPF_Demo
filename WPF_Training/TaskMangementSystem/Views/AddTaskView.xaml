@@ -21,8 +21,8 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Row="0" Grid.Column="0" Content="Heading" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Right"/>
-        <TextBox Grid.Row="0" Grid.Column="1" Height="30" Text="{Binding Task.Heading}" Width="200" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="#E0E0E0" />
+        <Label Grid.Row="0" Grid.Column="0" Content="Name" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Height="30" Text="{Binding Task.Name}" Width="200" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="#E0E0E0" />
 
         <Label Grid.Row="1" Grid.Column="0" Content="Description" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Right"/>
         <TextBox Grid.Row="1" Grid.Column="1" Height="100" Text="{Binding Task.Description}" Width="200" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="#E0E0E0" AcceptsReturn="True" TextWrapping="Wrap" />

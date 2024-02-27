@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:models="clr-namespace:TaskMangementSystem.Models"
         xmlns:local="clr-namespace:TaskMangementSystem.Views"
         mc:Ignorable="d"
         Title="Tasks Management System" Height="450" Width="800">
@@ -16,13 +17,54 @@
             <ListView ItemsSource="{Binding Tasks}" BorderBrush="#cdcdcd" Margin="25,70,25,25" Padding="0">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Task.Id}" Width="Auto" />
+                        <!--<GridViewColumn Header="Id" DisplayMemberBinding="{Binding Task.Id}" Width="Auto" />-->
                         <GridViewColumn Header="Date Of Creation" DisplayMemberBinding="{Binding Task.DateOfCreation}" Width="Auto" />
-                        <GridViewColumn Header="Heading" DisplayMemberBinding="{Binding Task.Heading}" Width="Auto" />
+                        <GridViewColumn Header="Name" DisplayMemberBinding="{Binding Task.Name}" Width="Auto" />
                         <GridViewColumn Header="Created By" DisplayMemberBinding="{Binding Task.CreatedBy}" Width="Auto" />
-                        <GridViewColumn Header="Status" DisplayMemberBinding="{Binding Task.Status}" Width="Auto" />
+                        
+                        <GridViewColumn Header="Status">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ComboBox ItemsSource="{Binding DataContext.TaskStatusValues, RelativeSource={RelativeSource AncestorType=ListView}}" SelectedItem="{Binding Task.Status, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <GridViewColumn Header="Actions">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Content="View Details" Command="{Binding DataContext.ShowTaskDetailsCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding Task}" Margin="5"/>
+                                        <Button Content="Delete Task" Command="{Binding DataContext.DeleteTaskCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"
+                                                CommandParameter="{Binding}" Margin="5"/>
+                                        <Button Content="Add Comments" Command="{Binding DataContext.ShowAddCommentCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding Task}" Margin="5"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
                     </GridView>
                 </ListView.View>
+
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.Triaged}">
+                                <Setter Property="Background" Value="LightGray"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.InProgress}">
+                                <Setter Property="Background" Value="LightBlue"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.UnderReview}">
+                                <Setter Property="Background" Value="LightYellow"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.Done}">
+                                <Setter Property="Background" Value="LightGreen"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.ItemContainerStyle>
             </ListView>
         </Grid>
     </Grid>
