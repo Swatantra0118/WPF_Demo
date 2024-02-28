@@ -11,6 +11,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using TaskMangementSystem.Models;
+using TaskMangementSystem.ViewModels;
 
 namespace TaskMangementSystem.Views
 {
@@ -22,6 +24,29 @@ namespace TaskMangementSystem.Views
         public TasksView()
         {
             InitializeComponent();
+        }
+
+        private void FilterTextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            TaskList.Items.Filter = FilterMethod;
+
+
+        }
+
+        private bool FilterMethod(object obj)
+        {
+            if (obj is TaskViewModel taskViewModel)
+            {
+                // Accessing the TaskModel from the TaskViewModel
+                var task = taskViewModel.Task;
+                if (task != null)
+                {
+                    // Performing case-insensitive search on the task name
+                    return task.Name.IndexOf(FilterTextBox.Text, StringComparison.OrdinalIgnoreCase) >= 0;
+                }
+            }
+            return false;
         }
     }
 }
