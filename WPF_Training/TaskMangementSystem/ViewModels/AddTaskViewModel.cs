@@ -4,12 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows;
 using TaskMangementSystem.Models;
 
 namespace TaskMangementSystem.ViewModels
 {
-    public class TaskViewModel : Screen
+    public class AddTaskViewModel : Screen
     {
         private TaskModel _task;
         public TaskModel Task
@@ -18,8 +17,18 @@ namespace TaskMangementSystem.ViewModels
             set
             {
                 _task = value;
-                NotifyOfPropertyChange(nameof(Task));
+                NotifyOfPropertyChange(() => Task);
             }
+        }
+
+        public AddTaskViewModel()
+        {
+            Task = new TaskModel();
+        }
+
+        public void AddTask()
+        {
+            TryCloseAsync(true);
         }
     }
 }

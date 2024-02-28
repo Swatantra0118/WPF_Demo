@@ -3,75 +3,87 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:TaskMangementSystem.Views" xmlns:viewmodels="clr-namespace:TaskMangementSystem.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:TasksViewModel}"
+        xmlns:models="clr-namespace:TaskMangementSystem.Models"
+        xmlns:local="clr-namespace:TaskMangementSystem.Views"
         mc:Ignorable="d"
-        Title="Tasks Management System" Height="450" Width="800" DataContextChanged="TasksView_DataContextChanged">
+        Title="Tasks Management System" Height="450" Width="800"
+        Name="mainwindow">
     <Grid Background="#F5F5F5">
         <Grid Background="White" Grid.Row="1" Margin="25,40,25,15" >
-            <TextBox Name="FilterTextBox"  Height="30" Width="200" Margin="25" 
+            <TextBox Name="FilterTextBox" TextChanged="FilterTextBox_TextChanged"  Height="30" Width="200" Margin="25" 
                      VerticalAlignment="Top"  HorizontalAlignment="left" BorderThickness="1" BorderBrush="#E0E0E0" />
-            <Button Height="30" Command="{Binding AddTaskCommand}"  
+            <Button Height="30" Command="{Binding ShowWindowCommand}"  
                     Content="Add Task" Width="100" VerticalContentAlignment="Center" Padding="5" Margin="25" VerticalAlignment="Top" 
                     HorizontalAlignment="Right" BorderThickness="1" BorderBrush="#E0E0E0"  />
-            <ListView ItemsSource="{Binding Tasks}" SelectedItem="{Binding SelectedTask, Mode=TwoWay}" SelectionMode="Single" BorderBrush="#cdcdcd" Margin="25,70,25,25" Padding="0">
+            <ListView Name="TaskList" ItemsSource="{Binding Tasks}" BorderBrush="#cdcdcd" Margin="25,70,25,25" Padding="0">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Task.Id}"/>
-                        <GridViewColumn Header="Date Of Creation" DisplayMemberBinding="{Binding Task.DateOfCreation}"/>
-                        <GridViewColumn Header="Heading" DisplayMemberBinding="{Binding Task.Heading}"/>
+                        <!--<GridViewColumn Header="Id" DisplayMemberBinding="{Binding Task.Id}" Width="Auto" />-->
+                        <!--<GridViewColumn Header="Date Of Creation" DisplayMemberBinding="{Binding Task.DateOfCreation}" Width="Auto" />-->
+                        <GridViewColumn Width="Auto">
+                            <GridViewColumnHeader Content="Date Of Creation" Click="DateOfCreationColumnHeader_Click"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Task.DateOfCreation}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Width="Auto">
+                            <GridViewColumnHeader Content="Name" Click="Name_Click"/>
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Task.Name}" />
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
+                        <!--<GridViewColumn Header="Name" DisplayMemberBinding="{Binding Task.Name}" Width="Auto" />-->
+                        <GridViewColumn Header="Created By" DisplayMemberBinding="{Binding Task.CreatedBy}" Width="Auto" />
+                        
+                        <GridViewColumn Header="Status">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ComboBox ItemsSource="{Binding DataContext.TaskStatusValues, RelativeSource={RelativeSource AncestorType=ListView}}" SelectedItem="{Binding Task.Status, Mode=TwoWay}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+
                         <GridViewColumn Header="Actions">
                             <GridViewColumn.CellTemplate>
                                 <DataTemplate>
                                     <StackPanel Orientation="Horizontal">
-                                        <Button Content="View" Click="TogglePopupVisibility" Margin="5"/>
-                                        <Button Content="Delete" Command="{Binding DataContext.DeleteTaskCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}" CommandParameter="{Binding}" Margin="5"/>
+                                        <Button Content="View Details" Command="{Binding DataContext.ShowTaskDetailsCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding Task}" Margin="5"/>
+                                        <Button Content="Delete Task" Command="{Binding DataContext.DeleteTaskCommand, RelativeSource={RelativeSource AncestorType={x:Type ListView}}}"
+                                                CommandParameter="{Binding}" Margin="5"/>
+                                        <Button Content="Add Comments" Command="{Binding DataContext.ShowAddCommentCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                                CommandParameter="{Binding Task}" Margin="5"/>
                                     </StackPanel>
                                 </DataTemplate>
                             </GridViewColumn.CellTemplate>
                         </GridViewColumn>
-                        
                     </GridView>
                 </ListView.View>
-         </ListView>
 
-            <Border x:Name="popupBorder" Background="#82bd92" BorderBrush="ForestGreen" BorderThickness="1" CornerRadius="10" Visibility="Collapsed"
-        Width="450" Height="450" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Grid Grid.Row="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"/>
-                        <RowDefinition Height="*"/>
-                    </Grid.RowDefinitions>
-
-
-
-                    <Border Grid.Row="0" Background="LightGreen" CornerRadius="10" Height="30">
-                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
-                            <TextBlock Text="Your Task                                                                                                     " VerticalAlignment="Center" Margin="5"/>
-                            <Button Content="X" Width="20" Height="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="5" Click="ClosePopup_Click"/>
-                        </StackPanel>
-                    </Border>
-
-                    <!-- Content -->
-                    <ListView ItemsSource="{Binding Comments}" Grid.Row="3" Background="AliceBlue" VerticalAlignment="Center" BorderBrush="#cdcdcd" Padding="0">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Id" DisplayMemberBinding="{Binding Id}"/>
-                                <GridViewColumn Header="Comment" DisplayMemberBinding="{Binding Comment}"/>
-                                <GridViewColumn Header="Date" DisplayMemberBinding="{Binding DateOfComment}"/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-
-
-                    <TextBox Grid.Row="1" Width="300" Height="75" Text="{Binding CommentText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10"/>
-
-                    <Button Grid.Row="2" Content="Add Comment" Command="{Binding AddCommentCommand}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10"/>
-
-                </Grid>
-            </Border>
-
-
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.Triaged}">
+                                <Setter Property="Background" Value="LightGray"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.InProgress}">
+                                <Setter Property="Background" Value="LightBlue"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.UnderReview}">
+                                <Setter Property="Background" Value="LightYellow"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Task.Status}" Value="{x:Static models:TaskModel+TaskStatus.Done}">
+                                <Setter Property="Background" Value="LightGreen"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ListView.ItemContainerStyle>
+            </ListView>
         </Grid>
-        
     </Grid>
 </Window>

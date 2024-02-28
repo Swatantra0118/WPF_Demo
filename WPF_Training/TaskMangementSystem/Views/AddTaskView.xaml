@@ -1,0 +1,45 @@
+﻿<Window x:Class="TaskMangementSystem.Views.AddTaskView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskMangementSystem.Views"
+        mc:Ignorable="d"
+        Title="AddTaskView" Height="450" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Row="0" Grid.Column="0" Content="Name" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Height="30" Text="{Binding Task.Name}" Width="200" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="#E0E0E0" />
+
+        <Label Grid.Row="1" Grid.Column="0" Content="Description" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Height="100" Text="{Binding Task.Description}" Width="200" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="#E0E0E0" AcceptsReturn="True" TextWrapping="Wrap" />
+
+        <Label Grid.Row="2" Grid.Column="0" Content="Created By" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <TextBox Grid.Row="2" Grid.Column="1" Height="30" Text="{Binding Task.CreatedBy}" Width="200" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="#E0E0E0" />
+
+        <!--<Label Grid.Row="3" Grid.Column="0" Content="Status" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+        <ComboBox Grid.Row="3" Grid.Column="1" Height="30" Width="200" Margin="25" VerticalAlignment="Top" HorizontalAlignment="Left" BorderThickness="1" BorderBrush="#E0E0E0" SelectedItem="{Binding Task.Status}">
+            <ComboBoxItem>UnderReview</ComboBoxItem>
+            <ComboBoxItem>InProgress</ComboBoxItem>
+            <ComboBoxItem>Done</ComboBoxItem>
+        </ComboBox>-->
+
+        <Button Grid.Row="3" Grid.Column="1" Height="30" x:Name="AddTask"
+        Content="Add" Width="70" Margin="25" HorizontalAlignment="Right" 
+        VerticalAlignment="Bottom" BorderThickness="1" BorderBrush="#E0E0E0"/>
+
+    </Grid>
+</Window>

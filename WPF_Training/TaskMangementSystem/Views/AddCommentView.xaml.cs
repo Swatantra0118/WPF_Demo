@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace TaskMangementSystem.Views
 {
     /// <summary>
-    /// Interaction logic for PopupWindow.xaml
+    /// Interaction logic for AddCommentView.xaml
     /// </summary>
-    public partial class PopupWindow : Window
+    public partial class AddCommentView : Window
     {
-        public PopupWindow()
+        public AddCommentView()
         {
             InitializeComponent();
         }

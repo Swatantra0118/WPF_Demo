@@ -1,10 +1,10 @@
 ﻿using Caliburn.Micro;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Windows;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Input;
 using TaskMangementSystem.Infrastructure;
 using TaskMangementSystem.Models;
@@ -12,26 +12,8 @@ using TaskMangementSystem.Views;
 
 namespace TaskMangementSystem.ViewModels
 {
-    public class TasksViewModel : Screen, INotifyPropertyChanged
+    public class TasksViewModel : Screen
     {
-        private TaskViewModel _selectedTask;
-        public TaskViewModel SelectedTask
-        {
-            get { return _selectedTask; }
-            set
-            {
-                if (_selectedTask != value)
-                {
-                    _selectedTask = value;
-                    OnPropertyChanged();
-                    OnPropertyChanged(nameof(IsPopupVisible)); 
-                    FilterComments();
-                }
-            }
-        }
-
-        public bool IsPopupVisible => SelectedTask != null;
-
         private ObservableCollection<TaskViewModel> _tasks;
         public ObservableCollection<TaskViewModel> Tasks
         {
@@ -39,42 +21,20 @@ namespace TaskMangementSystem.ViewModels
             set
             {
                 _tasks = value;
-                OnPropertyChanged();
+                NotifyOfPropertyChange(nameof(Tasks));
             }
         }
-
-        private ObservableCollection<CommentModel> _comments;
-        public ObservableCollection<CommentModel> Comments
-        {
-            get { return _comments; }
-            set
-            {
-                _comments = value;
-                OnPropertyChanged();
-            }
-        }
-        private string _commentText;
-        public string CommentText
-        {
-            get { return _commentText; }
-            set
-            {
-                _commentText = value;
-                OnPropertyChanged();
-            }
-        }
-
 
         public ICommand AddTaskCommand { get; set; }
         public ICommand UpdateTaskStatusCommand { get; set; }
         public ICommand DeleteTaskCommand { get; set; }
-        public ICommand AddCommentCommand { get; set; }
-        public ICommand ViewpopCommand { get; set; }
+        public ICommand ShowWindowCommand { get; set; }
+        public ICommand ShowTaskDetailsCommand { get; set; }
+        public ICommand ShowAddCommentCommand { get; set; }
 
         public TasksViewModel()
         {
             Tasks = new ObservableCollection<TaskViewModel>();
-            Comments = new ObservableCollection<CommentModel>();
 
             // Adding prior tasks
             Tasks.Add(new TaskViewModel
@@ -82,10 +42,26 @@ namespace TaskMangementSystem.ViewModels
                 Task = new TaskModel
                 {
                     Id = Guid.NewGuid(),
-                    DateOfCreation = DateTime.Now.AddDays(-2),
-                    Heading = "Prior Task 1",
+                    DateOfCreation = DateTime.Now.AddDays(-2), // Example date
+                    Name = "Prior Task 1",
                     Description = "Description for Prior Task 1",
-                    Status = TaskModel.TaskStatus.InProgress
+                    CreatedBy = "Swatantra",
+                    Status = TaskModel.TaskStatus.InProgress,
+                    Comments = new List<CommentModel>
+                    {
+                        new CommentModel
+                        {
+                            Id = 1,
+                            Comment = "First comment on the task",
+                            DateOfComment = DateTime.Now.AddDays(-2) // Example date
+                        },
+                        new CommentModel
+                        {
+                            Id = 2,
+                            Comment = "Second comment on the task",
+                            DateOfComment = DateTime.Now.AddDays(-1) // Example date
+                        }
+                    }
                 }
             });
 
@@ -94,28 +70,93 @@ namespace TaskMangementSystem.ViewModels
                 Task = new TaskModel
                 {
                     Id = Guid.NewGuid(),
-                    DateOfCreation = DateTime.Now.AddDays(-1),
-                    Heading = "Prior Task 2",
+                    DateOfCreation = DateTime.Now.AddDays(-1), // Example date
+                    Name = "Prior Task 2",
                     Description = "Description for Prior Task 2",
-                    Status = TaskModel.TaskStatus.InProgress
+                    CreatedBy = "Swatantra",
+                    Status = TaskModel.TaskStatus.InProgress,
+                    Comments = new List<CommentModel>
+                    {
+                        new CommentModel
+                        {
+                            Id = 1,
+                            Comment = "First comment on the task",
+                            DateOfComment = DateTime.Now.AddDays(-2) // Example date
+                        },
+                        new CommentModel
+                        {
+                            Id = 2,
+                            Comment = "Second comment on the task",
+                            DateOfComment = DateTime.Now.AddDays(-1) // Example date
+                        }
+                    }
                 }
             });
 
             AddTaskCommand = new RelayCommand(AddTask);
             UpdateTaskStatusCommand = new RelayCommand(UpdateTaskStatus);
             DeleteTaskCommand = new RelayCommand(DeleteTask);
-            AddCommentCommand = new RelayCommand(AddComment);
-            ViewpopCommand = new RelayCommand(Viewpop);
+            ShowWindowCommand = new RelayCommand(ShowWindow, CanShowWindow);
+            ShowTaskDetailsCommand = new RelayCommand(ShowTaskDetails, CanShowTaskDetails);
+            ShowAddCommentCommand = new RelayCommand(showAddComment, CanShowAddComment);
         }
 
-        private void Viewpop(object obj)
+        private bool CanShowAddComment(object obj)
         {
-            // Toggle the visibility of the popup by raising an event
-            OnTogglePopupRequested?.Invoke(this, EventArgs.Empty);
+            return true;
         }
 
-        // Event to request toggling the popup visibility
-        public event EventHandler OnTogglePopupRequested;
+        private async void showAddComment(object obj)
+        {
+            if (obj is TaskModel taskModel)
+            {
+                var addCommentViewModel = new AddCommentViewModel(taskModel);
+                var windowManager = new WindowManager();
+                bool? result = await windowManager.ShowDialogAsync(addCommentViewModel);
+            }
+        }
+
+        private bool CanShowWindow(object obj)
+        {
+            return true;
+        }
+
+        private async void ShowWindow(object obj)
+        {
+            //AddTask addTaskWindow = new AddTask();
+            //addTaskWindow.Show();
+            AddTaskViewModel addTaskViewModel = new AddTaskViewModel();
+            WindowManager windowManager = new WindowManager();
+            bool? result = await windowManager.ShowDialogAsync(addTaskViewModel);
+
+            if (result.HasValue && result.Value)
+            {
+                // If the user confirmed adding the task
+                addTaskViewModel.Task.Id = Guid.NewGuid();
+                addTaskViewModel.Task.DateOfCreation = DateTime.Now;
+                addTaskViewModel.Task.Status = TaskModel.TaskStatus.InProgress;
+                var newTaskViewModel = new TaskViewModel
+                {
+                    Task = addTaskViewModel.Task
+                };
+                Tasks.Add(newTaskViewModel);
+            }
+        }
+
+        private bool CanShowTaskDetails(object obj)
+        {
+            return true;
+        }
+
+        private async void ShowTaskDetails(object obj)
+        {
+            if (obj is TaskModel taskModel)
+            {
+                var taskDetailViewModel = new TaskDetailViewModel(taskModel);
+                var windowManager = new WindowManager();
+                bool? result = await windowManager.ShowDialogAsync(taskDetailViewModel);
+            }
+        }
 
         private void AddTask(object obj)
         {
@@ -126,8 +167,9 @@ namespace TaskMangementSystem.ViewModels
                 {
                     Id = Guid.NewGuid(),
                     DateOfCreation = DateTime.Now,
-                    Heading = "New Task",
+                    Name = "New Task",
                     Description = "This is a new task.",
+                    CreatedBy = "Swatantra",
                     Status = TaskModel.TaskStatus.InProgress
                 }
             };
@@ -139,72 +181,22 @@ namespace TaskMangementSystem.ViewModels
             // Update task status logic here
         }
 
-        private void DeleteTask(object parameter)
+        private void DeleteTask(object obj)
         {
-            if (parameter is TaskViewModel taskToDelete)
+            if (obj is TaskViewModel taskToDelete)
             {
                 Tasks.Remove(taskToDelete);
             }
         }
-        private void AddComment(object parameter)
-        {
-            //if (!string.IsNullOrWhiteSpace(CommentText) && SelectedTask != null)
-            //{
-            //    if (SelectedTask.Task.Comments == null)
-            //    {
-            //        SelectedTask.Task.Comments = new ObservableCollection<CommentModel>();
-            //    }
 
-            //    SelectedTask.Task.Comments.Add(new CommentModel
-            //    {
-            //        Id = SelectedTask.Task.Comments.Count + 1,
-            //        Comment = CommentText,
-            //        DateOfComment = DateTime.Now
-            //    });
+        public Array TaskStatusValues => Enum.GetValues(typeof(TaskModel.TaskStatus));
 
-            //    CommentText = "";
-            //}
-
-            // Check if the comment text is not empty
-            if (!string.IsNullOrWhiteSpace(CommentText))
-            {
-                // Add a new comment with the entered text
-                Comments.Add(new CommentModel
-                {
-                    Id = Comments.Count + 1,
-                    Comment = CommentText,
-                    DateOfComment = DateTime.Now
-                });
-
-                CommentText = "";
-            }
-        }
-
-        private void FilterComments()
-        {
-            if (SelectedTask != null)
-            {
-                if (SelectedTask.Task.Comments != null && SelectedTask.Task.Comments.Any())
-                {
-                    
-                    Comments = new ObservableCollection<CommentModel>(SelectedTask.Task.Comments);
-                }
-                else
-                {
-                    Comments.Clear(); 
-                }
-            }
-            else
-            {
-                Comments.Clear(); 
-            }
-        }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
-        {
-            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
+        //private void ChangeTaskStatus(object parameter)
+        //{
+        //    if (parameter is TaskViewModel taskViewModel && parameter is TaskModel.TaskStatus newStatus)
+        //    {
+        //        taskViewModel.Task.Status = newStatus;
+        //    }
+        //}
     }
 }

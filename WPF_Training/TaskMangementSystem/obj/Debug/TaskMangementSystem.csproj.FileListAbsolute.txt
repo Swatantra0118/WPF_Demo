@@ -40,46 +40,151 @@ C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\Ta
 C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.CopyComplete
 C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.exe
 C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.pdb
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.exe.config
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.exe
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.pdb
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.dll
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.dll
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.dll
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\CommonServiceLocator.dll
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.dll
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.dll
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.dll
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.dll
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\System.Windows.Interactivity.dll
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.pdb
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.xml
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.pdb
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.xml
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.pdb
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.xml
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.pdb
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.xml
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.xml
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.xml
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.pdb
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.xml
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.AssemblyReference.cache
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\TasksView.g.cs
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\App.g.cs
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem_MarkupCompile.cache
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem_MarkupCompile.lref
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\App.baml
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\TasksView.baml
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.g.resources
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.Properties.Resources.resources
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.GenerateResource.cache
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.CoreCompileInputs.cache
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.CopyComplete
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.exe
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.pdb
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\PopupWindow.g.cs
-C:\Users\talhakhan\Downloads\WPF-Task\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\PopupWindow.baml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddTaskView.g.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddTaskView.baml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\Views\TaskDetailView.g.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\Views\TaskDetailView.baml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddCommentView.g.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddCommentView.baml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.exe.config
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.exe
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\CommonServiceLocator.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.xml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.xml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.xml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.AssemblyReference.cache
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.SuggestedBindingRedirects.cache
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddCommentView.g.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddTaskView.g.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\TaskDetailView.g.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\TasksView.g.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\App.g.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem_MarkupCompile.cache
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem_MarkupCompile.lref
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\App.baml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddCommentView.baml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddTaskView.baml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\TaskDetailView.baml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\TasksView.baml
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.g.resources
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.Properties.Resources.resources
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.GenerateResource.cache
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.CoreCompileInputs.cache
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.CopyComplete
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.exe
+C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Assignment_Demo\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.pdb
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.exe.config
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.exe
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.pdb
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.dll
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.dll
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.dll
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\CommonServiceLocator.dll
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.pdb
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.xml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.pdb
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.xml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.pdb
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.xml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.AssemblyReference.cache
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddCommentView.g.cs
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddTaskView.g.cs
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\TaskDetailView.g.cs
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\TasksView.g.cs
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\App.g.cs
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem_MarkupCompile.cache
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem_MarkupCompile.lref
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\App.baml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddCommentView.baml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddTaskView.baml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\TaskDetailView.baml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\Views\TasksView.baml
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.g.resources
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.Properties.Resources.resources
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.GenerateResource.cache
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.CoreCompileInputs.cache
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.CopyComplete
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.exe
+C:\Users\talhakhan\Downloads\NewWPFPUSH\WPF_Demo\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.pdb
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.exe.config
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.exe
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\TaskMangementSystem.pdb
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.dll
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.dll
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.dll
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\CommonServiceLocator.dll
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.dll
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.dll
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.dll
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.pdb
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Core.xml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.pdb
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.xml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.pdb
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Caliburn.Micro.Platform.Core.xml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.pdb
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.xml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.pdb
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Extras.xml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.AssemblyReference.cache
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddCommentView.g.cs
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddTaskView.g.cs
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\Views\TaskDetailView.g.cs
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\Views\TasksView.g.cs
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\App.g.cs
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem_MarkupCompile.cache
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem_MarkupCompile.lref
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\App.baml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddCommentView.baml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\Views\AddTaskView.baml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\Views\TaskDetailView.baml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\Views\TasksView.baml
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.g.resources
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.Properties.Resources.resources
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.GenerateResource.cache
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.CoreCompileInputs.cache
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.csproj.CopyComplete
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.exe
+C:\Users\talhakhan\Downloads\WPF_Training\TaskMangementSystem\obj\Debug\TaskMangementSystem.pdb
