@@ -1,6 +1,7 @@
 ﻿using Caliburn.Micro;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,8 +10,9 @@ using TaskMangementSystem.Models;
 
 namespace TaskMangementSystem.ViewModels
 {
-    public class TaskViewModel : Screen
+    public class TaskViewModel : Screen, INotifyPropertyChanged
     {
+
         private TaskModel _task;
         public TaskModel Task
         {
@@ -21,5 +23,17 @@ namespace TaskMangementSystem.ViewModels
                 NotifyOfPropertyChange(nameof(Task));
             }
         }
+
+        public TaskModel.TaskStatus Status
+        {
+            get { return _task.Status; }
+            set
+            {
+                _task.Status = value;
+                NotifyOfPropertyChange(nameof(Status));
+                NotifyOfPropertyChange(nameof(Task));
+            }
+        }
+
     }
 }

@@ -1,0 +1,36 @@
+﻿<Window x:Class="TaskMangementSystem.Views.TaskDetailView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TaskMangementSystem.Views"
+        mc:Ignorable="d"
+        Title="TaskDetailView" Height="450" Width="800">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Task details -->
+        <StackPanel Grid.Row="0" Margin="20">
+            <TextBlock Text="{Binding Task.Name}" FontWeight="Bold" FontSize="16"/>
+            <TextBlock Text="{Binding Task.DateOfCreation}" Margin="0,5,0,0"/>
+            <!--<TextBlock Text="{Binding Task.Heading}" Margin="0,5,0,0"/>-->
+            <TextBlock Text="{Binding Task.Description}" Margin="0,5,0,0"/>
+            <TextBlock Text="{Binding Task.CreatedBy}" Margin="0,5,0,0"/>
+            <TextBlock Text="{Binding Task.Status}" Margin="0,5,0,0"/>
+        </StackPanel>
+
+        <!-- Comments section -->
+        <ListBox Grid.Row="1" Margin="20" ItemsSource="{Binding Task.Comments}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Comment}" Margin="0,0,0,5"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</Window>

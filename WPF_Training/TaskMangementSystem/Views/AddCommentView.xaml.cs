@@ -11,20 +11,17 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using TaskMangementSystem.ViewModels;
 
 namespace TaskMangementSystem.Views
 {
     /// <summary>
-    /// Interaction logic for AddTaskView.xaml
+    /// Interaction logic for AddCommentView.xaml
     /// </summary>
-    public partial class AddTaskView : Window
+    public partial class AddCommentView : Window
     {
-        public AddTaskView()
+        public AddCommentView()
         {
             InitializeComponent();
-
-            DataContext = new TasksViewModel();
         }
     }
 }

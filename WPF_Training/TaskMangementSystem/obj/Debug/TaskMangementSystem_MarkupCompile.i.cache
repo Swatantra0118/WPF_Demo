@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\swatantratiwari\OneDrive - Nagarro\Desktop\WPF_Training\WPF_Training\TaskMangementSystem\App.xaml
-21893380784
+41791332624
 
-14753159624
+18-1295037788
 1271365485589
-Views\AddTaskView.xaml;Views\TasksView.xaml;
+Views\AddCommentView.xaml;Views\AddTaskView.xaml;Views\TaskDetailView.xaml;Views\TasksView.xaml;
 
 True
 

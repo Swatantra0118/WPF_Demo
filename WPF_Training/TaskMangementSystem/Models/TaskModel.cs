@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,10 @@ namespace TaskMangementSystem.Models
         public Guid Id { get; set; }
         public DateTime DateOfCreation { get; set; }
         public string Heading { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
         public string CreatedBy { get; set; }
         public List<CommentModel> Comments { get; set; }
-        //public string Status { get; set; }
         public enum TaskStatus
         {
             Triaged,
@@ -23,6 +24,11 @@ namespace TaskMangementSystem.Models
             Done
         }
         public TaskStatus Status { get; set; }
+
+        public TaskModel()
+        {
+            Comments = new List<CommentModel>();
+        }
 
     }
 }
