@@ -32,7 +32,15 @@ namespace TaskMangementSystem.Views
 
             TaskList.Items.Filter = FilterMethod;
 
+        }
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Name_Click(sender, e);
+        }
+        private void try_click(object sender, RoutedEventArgs e)
+        {
+            Name_Click(sender, e);
         }
 
 
@@ -69,7 +77,10 @@ namespace TaskMangementSystem.Views
         }
         private void Name_Click(object sender, RoutedEventArgs e)
         {
-            GridViewColumnHeader headerClicked = e.OriginalSource as GridViewColumnHeader;
+             GridViewColumnHeader headerClicked = NameColumnHeader;
+            // Name="NameColumnHeader"
+           // GridViewColumnHeader headerClicked = e.OriginalSource as GridViewColumnHeader;
+
             if (headerClicked != null)
             {
                 string header = headerClicked.Content as string;
